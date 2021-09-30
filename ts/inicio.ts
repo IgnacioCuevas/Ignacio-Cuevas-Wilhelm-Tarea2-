@@ -18,6 +18,12 @@ const $:JQueryStatic=jquery;
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
+            console.log("A")
+          } else {
+            mostrarMensaje();
+            event.preventDefault()
+            event.stopPropagation()
+            console.log("B")
           }
   
           form.classList.add('was-validated')
@@ -25,7 +31,7 @@ const $:JQueryStatic=jquery;
       })
   })()
 
-let formulario:any=document.getElementById("formulario");
+/*let formulario:any=document.getElementById("formulario");
 
 formulario.onsubmit = function(event:any) {
   let rut:any = document.getElementById("rut");
@@ -55,5 +61,11 @@ function validarRut(rut:any) {
 function validarTelefono() {
   let telefono:any=document.getElementById("telefono");
   if (telefono.value.length!=9) return false;
-}
+}*/
 
+const div_mensaje:any=document.getElementById("mensaje");
+const div_formulario:any=document.getElementById("formulario");
+function mostrarMensaje(): void {
+  div_mensaje.classList.replace('d-none', 'd-block');
+  div_formulario.classList.replace('d-block','d-none');
+};
