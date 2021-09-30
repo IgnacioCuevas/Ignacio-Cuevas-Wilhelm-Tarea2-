@@ -1,0 +1,227 @@
+!<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--estilos -->
+        <link href="css/estilos.css" rel="stylesheet">
+        
+        
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <form id="formulario" class="row g-3 needs-validation" method="GET" novalidate> <!--FORMULARIO-->
+                <ul id="errores">
+                    <li> <!--Nombre-->
+
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input name="nombre" type="text" class="form-control" id="nombre" placeholder="ejemplo: Ignacio Cuevas" required/>
+                        <div class="valid-feedback">
+                            el nombre esta bien
+                          </div>
+                          <div class="invalid-feedback">
+                            El nombre es obligatorio
+                          </div>
+                    </li> <!--Nombre-->
+
+                    <li> <!--RUT-->
+                        <label for="rut" class="form-label">RUT</label>
+                        <!--required="required" pattern="\d{3,8}-[\d|kK]{1}"-->
+                        <input type="text" class="form-control" id="rut" placeholder="ejemplo: 20704596-9" maxlength="10" required="required" pattern="\d{3,8}-[\d|kK]{1}" />
+                        
+                        <div class="valid-feedback">
+                            El formato rut esta bien
+                          </div>
+                          <div class="invalid-feedback">
+                            No es el formato correcto
+                          </div>
+                    </li> <!--RUT-->
+
+                    <li> <!--CORREO-->
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="correo" placeholder="ejemplo: ignacio.cuevas.w@mail.pucv.cl" required/>
+                        <div class="valid-feedback">
+                            El formato del correo esta bien escrito
+                          </div>
+                          <div class="invalid-feedback">
+                            No es el formato correcto
+                          </div>
+                    </li><!--CORREO-->
+                    <li>
+                    <li> <!--Telefono-->
+                        <label for="telefono" class="form-label">Telefono celular</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="ejemplo: 9 94735756" maxlength="9" pattern="[0-9]{9}" required/>
+                        <div class="valid-feedback">
+                            El telefono celular esta bien escrito
+                          </div>
+                          <div class="invalid-feedback">
+                            El telefono es incorrecto
+                          </div>
+                    </li><!--Telefono-->
+                    <li> <!--LENGUAJES-->
+                        <div class="row">
+                          <ul>
+                            <li class="col-12">
+                              <label for="interes" class="form-check-label col-12">Seleccione uno o mas lenguajes de programación de su interés </label>
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion1" />
+                                  <label class="form-check-label" for="opcion1">Python</label>
+                                <div>
+                                
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion2"/>
+                                  <label class="form-check-label" for="opcion2">TypeScript</label>
+                                </div>
+
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion3"/>
+                                  <label class="form-check-label" for="opcion3">C++</label>
+                                </div>
+
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion4"/>
+                                  <label class="form-check-label" for="opcion4">C#</label>
+                                </div>
+                                
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion5">
+                                  <label class="form-check-label" for="opcion5">PHP</label>
+                                </div>
+      
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion6">
+                                  <label class="form-check-label" for="opcion6">Ruby on Rails</label>
+                                </div>
+
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion7">
+                                  <label class="form-check-label" for="opcion7">Java</label>
+                                </div>
+
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion8">
+                                  <label class="form-check-label" for="opcion8">R</label>
+
+                                </div>
+
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion9">
+                                  <label class="form-check-label" for="opcion9">Groovy</label>
+                                </div>
+
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion10">
+                                  <label class="form-check-label" for="opcion10">Go</label>
+                                </div>
+  
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion11">
+                                  <label class="form-check-label" for="opcion11">Swift</label>
+                                </div>
+
+                                <div class="form-check-label col-12">
+                                  <input class="form-check-input " type="checkbox" id="opcion12">
+                                  <label class="form-check-label" for="opcion12">Kotlin</label>
+                                </div>
+                            </li>
+                          </ul>
+                        </div>
+                    </li> <!--LENGUAJES-->
+                    <li> <!--EXPERIENCIA-->
+                      <div class="row">
+                        <ul>
+                          <li class="col-12">
+                            <label for="experiencia" class="form-check-label col-12l">¿Cuál es su nivel de experiencia en programación?</label>
+
+                            <div class="form-check-label col-12">
+                              <input type="radio" id="alto" name="radio1" value="1"/> Alto
+                            </div>
+
+                            <div class="form-check-label col-12">
+                              <input type="radio" id="medio" name="radio1" value="2"/> Medio
+                            </div>
+
+                            <div class="form-check-label col-12">
+                              <input type="radio" id="bajo" name="radio1" value="3"/> Bajo
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li> <!--EXPERIENCIA-->
+                    <li> <!--Nivel de conocimiento-->
+                      <div class="row">
+                        <ul>
+                          <li class="col-12">
+                            <label for="experiencia" class="form-check-label col-12l">Nivel de conocimiento sobre los siguientes lenguajes de programación</label>
+
+                            <div class="form-check-label col-12">
+                              <input type="range" id="python" min="0" max="200"/> Python
+                            </div>
+
+                            <div class="form-check-label col-12">
+                              <input type="range" id="java" min="0" max="200"/> Java
+                            </div>
+
+                            <div class="form-check-label col-12">
+                              <input type="range" id="c" min="0" max="200"/> C++
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li> <!--Nivel de conocimiento-->
+                    <li> <!--Cursos tomados con mayor dificultad-->
+                      <div class="row">
+                        <ul>
+                          <li class="col-12">
+                            <label for="experiencia" class="form-check-label col-12l">Seleccione cuál de los siguientes cursos les ha tomado mayor dificultad</label>
+
+                            <div class="form-check-label col-12">
+                              <input class="form-check-input " type="checkbox" id="estructura">
+                              <label class="form-check-label" for="estructura">Estructura de datos</label>
+                            </div>
+
+                            <div class="form-check-label col-12">
+                              <input class="form-check-input " type="checkbox" id="inteligencia">
+                              <label class="form-check-label" for="inteligencia">Inteligencia Artificial</label>
+                            </div>
+
+                            <div class="form-check-label col-12">
+                              <input class="form-check-input " type="checkbox" id="interaccion">
+                              <label class="form-check-label" for="interaccion">Interacción Humano-Computador</label>
+                            </div>
+
+                            <div class="form-check-label col-12">
+                              <input class="form-check-input " type="checkbox" id="sistemas">
+                              <label class="form-check-label" for="sistemas">Sistemas Operativos</label>
+                            </div>
+
+                            <div class="form-check-label col-12">
+                              <input class="form-check-input " type="checkbox" id="opcionOtro">
+                              <label class="form-check-label" for="opcionOtro">Otro</label>
+                              <input type="text" class="form-control" id="opcionOtro"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li> <!--Cursos tomados con mayor dificultad-->
+                    <li> Queremos conocer su opinión acerca de la escuela<!--OPINION-->
+                      <textarea id="opinion" maxlength="500" cols="50" rows="3"></textarea>
+                    </li> <!--OPINION-->
+                    <li>
+                      <button class="btn btn-primary" type="submit">Enviar</button>
+                      <button type="reset">Cancelar</button>
+                    </li>
+            </form>
+        </div>
+
+        <script data-main="js/inicio" src="js/require-jquery.js"></script>
+         </body>
+</html>
